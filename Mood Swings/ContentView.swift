@@ -24,43 +24,39 @@ struct ContentView: View {
     
     // All top level options
     var topLevelOptions = [
-        Parent(name: "Happy", children: [
+        Parent(name: "HAPPY;)", children: [
             
-            Child(name: "Awesome!!",
+            Child(name: "AWESOME!!",
                   description: "Thats so good that you're happy! Keep it going!",
                   imageName: "happypic"),
-            Child(name: "TIRED",
-                  description: "I'm feeling tired...",
-                  imageName: "image1b"),
-            Child(name: "SAD",
-                  description: "I'm kinda sad right now...",
-                  imageName: "image1c"),
+            Child(name: "Things you can do...",
+                  description: "You might be having an awesome day, which is great, but have you noticed anyone around you that feels a little down today? Go check on them! Help others out as well!",
+                  imageName: "kindpic"),
+            
+         
 
         ]),
-        Parent(name: "Tired", children: [
+        Parent(name: "TIRED:/", children: [
 
-            Child(name: "Option 2a",
-                  description: "I feel tired and sleepy today.",
-                  imageName: "image2a"),
-            Child(name: "Option 2b",
-                  description: "Some explanatory information about option 2b",
-                  imageName: "image2b"),
+            Child(name: "Why am I tired?",
+                  description: "It's normal to feel tired somedays, if you think carefully, did I sleep well last night? Did I have too much caffine last night? Or do I just need a nap and take this day off?",
+                  imageName: "tiredpic"),
+            Child(name: "How to feel less tired...",
+                  description: "GET MOVING! Go to the gym, workout, and eat fruits to boost up your vitamins, or maybe even go on a run! Also drinking water is very critical, cut out alcohol, and caffine for the day. PSST! take a whiff of cinnamon stick, it helps! ",
+                  imageName: "tiredpictwo"),
 
         ]),
-        Parent(name: "Sad", children: [
+        Parent(name: "SAD:(", children: [
 
-            Child(name: "Option 3a",
-                  description: "Some explanatory information about option 3a",
-                  imageName: "image3a"),
-            Child(name: "Option 3b",
-                  description: "Some explanatory information about option 3b",
-                  imageName: "image3b"),
-            Child(name: "Option 3c",
-                  description: "Some explanatory information about option 3c",
-                  imageName: "image3c"),
-            Child(name: "Option 3d",
-                  description: "Some explanatory information about option 3d",
-                  imageName: "image3d"),
+            Child(name: "BREATHE",
+                  description: "I know this might not be what you're thinking, but take a minute to just breathe, take the time to think, and calm down.",
+                  imageName: "sadpictwo"),
+            Child(name: "Things you can do",
+                  description: "You can try to talk to someone that might understand the situation you're in, overall, getting all your problems out and just having someone to talk to will make you feel so much better. Force yourself to leave the situation you're in cut away all the toxiness. Focus on yourself, not others.",
+                  imageName: "sadpicb"),
+            Child(name: "It's going to be okay.",
+                  description: "I know this might not be what you're thinking right now, but it's going to be okay, it always does, just stop stressing, and focus on what you can do at the moment.",
+                  imageName: "sadpic"),
 
         ]),
     ]
@@ -76,7 +72,7 @@ struct ContentView: View {
                 
                 Section {
                     
-                    Picker("Select a top level option", selection: $selectedTopLevelOption) {
+                    Picker("How do I Feel Today...", selection: $selectedTopLevelOption) {
                         
                         ForEach(0 ..< topLevelOptions.count) { index in
                             
@@ -101,7 +97,7 @@ struct ContentView: View {
                 }
                 
             }
-            .navigationTitle("Parent-Child Nav")
+            .navigationTitle("Mood Swings")
         }
         
     }

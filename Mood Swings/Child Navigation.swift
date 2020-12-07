@@ -18,17 +18,19 @@ struct ChildDetailView: View {
             VStack {
                 
                 // NOTE: If no image appears, be sure an image with the appropriate name is in the Assets.xcassets folder
-                Text("Showing image named \(child.imageName)... IF it is in the Assets.xcassets folder")
-                
+               
                 Image(child.imageName)
                         .resizable()
-                        .scaledToFit()
+                    .padding(.horizontal)
+                    .scaledToFit()
                 
                 Text(child.description)
+                    .padding(.all)
                 
             }
 
         }
+        .padding(.horizontal)
         .navigationTitle(child.name)
         
     }
