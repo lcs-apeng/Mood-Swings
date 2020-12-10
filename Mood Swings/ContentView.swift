@@ -39,10 +39,10 @@ struct ContentView: View {
         Parent(name: "TIRED:/", children: [
 
             Child(name: "It's fine to have some bad days",
-                  description: "It's normal to feel tired somedays, if you think carefully, did I sleep well last night? Did I have too much caffine last night? Or do I just need a nap and take this day off?",
+                  description: "It's normal to feel tired somedays, if you think carefully, did I sleep well last night? Did I have too much caffine last night? Or do I just need a nap and take this day off? And try to avoid those things that may affect your mood and mind.",
                   imageName: "tiredpic"),
-            Child(name: "Solutions...",
-                  description: "GET MOVING! Go to the gym, workout, and eat fruits to boost up your vitamins, or maybe even go on a run! Also drinking water is very critical, cut out alcohol, and caffine for the day. PSST! take a whiff of cinnamon stick, it helps! ",
+            Child(name: "Solutions I might consider",
+                  description: "GET MOVING! Go to the gym, when you're active, you're most likley to feel so much better, workout, and eat fruits to boost up your vitamins! Also drinking water is very critical dehydrated may also lead to tiredness, cut out alcohol, and caffine for the day. PSST! take a whiff of cinnamon stick, it helps! ",
                   imageName: "tiredpictwo"),
 
         ]),
@@ -51,7 +51,7 @@ struct ContentView: View {
             Child(name: "BREATHE",
                   description: "I know this might not be what you're thinking, but take a minute to just breathe, take the time to think, and calm down.",
                   imageName: "sadpictwo"),
-            Child(name: "Things you can do...",
+            Child(name: "Things to consider...",
                   description: "You can try to talk to someone that might understand the situation you're in, overall, getting all your problems out and just having someone to talk to will make you feel so much better. Force yourself to leave the situation you're in cut away all the toxiness. Focus on yourself, not others.",
                   imageName: "sadpicb"),
             Child(name: "It's going to be okay.",
@@ -106,6 +106,7 @@ struct ContentView: View {
                 
             }
             .navigationTitle("Mood Swings")
+            .onAppear()
         }
         
     }

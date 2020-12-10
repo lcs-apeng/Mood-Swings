@@ -14,6 +14,7 @@
 		BA5C97042579283000664732 /* Mood_SwingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C97032579283000664732 /* Mood_SwingsTests.swift */; };
 		BA5C970F2579283000664732 /* Mood_SwingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C970E2579283000664732 /* Mood_SwingsUITests.swift */; };
 		BA5C9720257BDB4000664732 /* Child Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C971F257BDB4000664732 /* Child Navigation.swift */; };
+		BA5C97282582663C00664732 /* Notifications .swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5C97272582663C00664732 /* Notifications .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BA5C970E2579283000664732 /* Mood_SwingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood_SwingsUITests.swift; sourceTree = "<group>"; };
 		BA5C97102579283000664732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5C971F257BDB4000664732 /* Child Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Child Navigation.swift"; sourceTree = "<group>"; };
+		BA5C97272582663C00664732 /* Notifications .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				BA5C96FA2579283000664732 /* Info.plist */,
 				BA5C96F72579283000664732 /* Preview Content */,
 				BA5C971F257BDB4000664732 /* Child Navigation.swift */,
+				BA5C97272582663C00664732 /* Notifications .swift */,
 			);
 			path = "Mood Swings";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA5C96F42579282B00664732 /* ContentView.swift in Sources */,
+				BA5C97282582663C00664732 /* Notifications .swift in Sources */,
 				BA5C9720257BDB4000664732 /* Child Navigation.swift in Sources */,
 				BA5C96F22579282B00664732 /* Mood_SwingsApp.swift in Sources */,
 			);
