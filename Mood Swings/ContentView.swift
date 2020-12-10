@@ -83,8 +83,11 @@ struct ContentView: View {
                         // Ask User for permission to send notifications
                         askNotificationPermission()
                         // Send a notification (change timeUntil & message for each new one)
-                        publishNotifications(timeUntil: 10, title:  "Mood Swings", message: "Be happy")
-                        
+                        publishNotifications(timeUntil: 460, title:  "Mood Swings", message: "smile more!")
+                        publishNotifications(timeUntil: 900, title:  "Mood Swings", message: "talk to a friend, it helps.")
+                        publishNotifications(timeUntil: 1800, title:  "Mood Swings", message: "how are you feeling? Just checking in!")
+                        publishNotifications(timeUntil: 3600, title:  "Mood Swings", message: "it's me agian, you look sharp today!")
+                        publishNotifications(timeUntil: 8000, title:  "Mood Swings", message: "you seem to be doing good, see you tmr!")
                     }, label: {
                         Text("Would you like a notification?")
                     })
