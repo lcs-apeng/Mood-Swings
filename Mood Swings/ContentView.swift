@@ -33,21 +33,21 @@ struct ContentView: View {
                   description: "You might be having an awesome day, which is great, but have you noticed anyone around you that feels a little down today? Go check on them! Help others out as well!",
                   imageName: "kindpic"),
             
-         
-
+            
+            
         ]),
         Parent(name: "TIRED:/", children: [
-
+            
             Child(name: "It's fine to have some bad days",
                   description: "It's normal to feel tired somedays, if you think carefully, did I sleep well last night? Did I have too much caffine last night? Or do I just need a nap and take this day off? And try to avoid those things that may affect your mood and mind.",
                   imageName: "tiredpic"),
             Child(name: "Solutions I might consider",
                   description: "GET MOVING! Go to the gym, when you're active, you're most likley to feel so much better, workout, and eat fruits to boost up your vitamins! Also drinking water is very critical dehydrated may also lead to tiredness, cut out alcohol, and caffine for the day. PSST! take a whiff of cinnamon stick, it helps! ",
                   imageName: "tiredpictwo"),
-
+            
         ]),
         Parent(name: "SAD:(", children: [
-
+            
             Child(name: "BREATHE",
                   description: "I know this might not be what you're thinking, but take a minute to just breathe, take the time to think, and calm down.",
                   imageName: "sadpictwo"),
@@ -57,7 +57,7 @@ struct ContentView: View {
             Child(name: "It's going to be okay.",
                   description: "I know this might not be what you're thinking right now, but it's going to be okay, it always does, just stop stressing, and focus on what you can do at the moment.",
                   imageName: "sadpic"),
-
+            
         ]),
     ]
     
@@ -75,11 +75,19 @@ struct ContentView: View {
                         .resizable()
                         .padding(.all)
                         .scaledToFit()
-                        
+                    
                 }
                 
                 Section {
-                    
+                    Button(action: {
+                        // Ask User for permission to send notifications
+                        askNotificationPermission()
+                        // Send a notification (change timeUntil & message for each new one)
+                        publishNotifications(timeUntil: 10, title:  "Mood Swings", message: "Be happy")
+                        
+                    }, label: {
+                        Text("Would you like a notification?")
+                    })
                     Picker("How do I Feel Today...", selection: $selectedTopLevelOption) {
                         
                         ForEach(0 ..< topLevelOptions.count) { index in
@@ -89,7 +97,7 @@ struct ContentView: View {
                         }
                         
                     }
-
+                    
                 }
                 
                 Section {
@@ -101,12 +109,11 @@ struct ContentView: View {
                                        destination: ChildDetailView(child: secondLevelOption))
                         
                     }
-
+                    
                 }
                 
             }
             .navigationTitle("Mood Swings")
-            .onAppear()
         }
         
     }
@@ -117,4 +124,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
 
